@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../static/LION32.ico">
+  <link rel="stylesheet" href="../static/bootstrap.css" type="text/css">
+  <title>師大商圈</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{url_for('main')}}">首頁</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html#news">商圈快訊
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#map">行動地圖</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="index.html#intro" role="button" aria-haspopup="true" aria-expanded="false">店家介紹</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">食物類</a>
+            <a class="dropdown-item" href="#">咖啡廳</a>
+            <a class="dropdown-item" href="#">服飾類</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">美容類</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#score">遊戲排行榜</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="feedback.html">意見回饋</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-sm-2" type="text" placeholder="在本站搜尋">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">search</button>
+      </form>
+    </div>
+  </div>
+  </nav>
+  <main class="text-sm-center">
+    <br>
+    <br>
+    <br>
+    <h1>師大商圈</h1>
+    <br><br>
+    <h4>意見回饋表單（beta）</h4>
+    <br>
+    <input class="btn btn-lg btn-primary" type="button" value="我是居民" onclick="location.href='#'">
+    <input class="btn btn-lg btn-primary" type="button" value="我是遊客" onclick="location.href='#'">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </main>
+  <footer>
+      <p class="footer-text">僅供 @2021 Line Fresh 商業競賽 使用&emsp;&emsp;隊名：晚點再想&emsp;&emsp;</p>
+  </footer>
+</body>
+</html>

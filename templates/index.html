@@ -3,45 +3,45 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="{{ url_for('static', filename='LION.ico') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/static/LION32.ico">
   <link rel="stylesheet" href="/static/bootstrap.css" type="text/css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>師大商圈</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">首頁</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">首頁
+          <a class="nav-link active" href="#news">商圈快訊
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">最新消息</a>
+          <a class="nav-link" href="#map">行動地圖</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">排行榜</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">意見回饋</a>
-        </li>
+        
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">店家介紹</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#intro" role="button" aria-haspopup="true" aria-expanded="false">店家介紹</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">食物類</a>
             <a class="dropdown-item" href="#">咖啡廳</a>
             <a class="dropdown-item" href="#">服飾類</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
+            <a class="dropdown-item" href="#">美容類</a>
           </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#score">遊戲排行榜</a>
+        </li>
+        <li class="nav-item">
+          <!-- <a class="nav-link" href="feedback.html">意見回饋</a> -->
+          <a class="nav-link" href="{{url_for('home')}}">意見回饋</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -52,24 +52,170 @@
   </div>
   </nav>
   <main class="text-sm-center">
-    <br>
-    <br>
-    <br>
+    <br><br><br>
     <h1>師大商圈</h1>
-    <p>內文內文內文內文內文內文內文內文內文內文內文</p>
-    <!-- <a href="{{ url_for('login') }}"><input class="btn btn-lg btn-primary" type="button" value="登入會員" ></a> -->
-    <p>{{result}}</p>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <img src="/static/師大商圈入口.jpeg" alt="圖為師大商圈，取自台北畫刊106年8月第595期">
+    <br><br>
+    <h2 id="news">商圈快訊</h2>
+
+    <div class="list-group news">
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">最新消息</h5>
+          <small class="text-muted">兩天前</small>
+        </div>
+        <p class="mb-1">快閃！免費棉花糖攤位！</p>
+        <small class="text-muted">活動地點：台北市大安區師大路39巷1號(銅樂時尚鍋物)</small>
+      </a>
+      <a href="https://www.mobii.ai/Explore/ExploreDetail/290094498963830?navNo=2&showBack=false" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">最新消息</h5>
+          <small class="text-muted">五天前</small>
+        </div>
+        <p class="mb-1">Fun 大你的五倍卷！一千換一千三！</p>
+        <small class="text-muted">點擊查看優惠券</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">團隊資訊</h5>
+          <small class="text-muted">一週前</small>
+        </div>
+        <p class="mb-1">左下角，拜訪問卷，抽500元禮券或現金！</p>
+        <small class="text-muted">問卷填答人數突破400人次！點擊查看中獎名單！</small>
+      </a>
+      <a href="https://mobii.ai/Notification/NotificationDetail/380086749006465?utm_source=line&utm_medium=menu&utm_campaign=microcloud&utm_group=ntnunightmarket" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">相關網站</h5>
+          <small class="text-muted">一年前</small>
+        </div>
+        <p class="mb-1">商圈專屬外帶點餐！體驗經濟部雲世代商圈數位轉型計畫服務</p>
+        <small class="text-muted">手刀點擊訂購！時間到再出門取餐！</small>
+      </a>
+    </div>
+    <br><br>
+    <h2 id="map">行動地圖</h2>
+    <iframe src="https://www.google.com/maps/d/embed?mid=10_spP6OcnCMn-zwhUVfgxj3Ni4gd8keb" width="640" height="480"></iframe>
+    <br><br>
+    <h2 id="intro">店家介紹beta</h2>
+    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+      <div class="btn-group me-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn-secondary">食物類</button>
+        <button type="button" class="btn btn-secondary">咖啡廳</button>
+        <button type="button" class="btn btn-secondary">服飾類</button>
+        <button type="button" class="btn btn-secondary">美容類</button>
+      </div>
+    </div>
+    <br><br>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">店家名稱</h4>
+        <h6 class="card-subtitle mb-2 text-muted">店家類別</h6>
+        <p class="card-text">店家資訊</p>
+        <a href="#" class="card-link">上一則</a>
+        <a href="#" class="card-link">下一則</a>
+      </div>
+    </div>
+    <br><br>
+    <h2 id="score">遊戲排行榜</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">排名</th>
+          <th scope="col">團隊名稱</th>
+          <th scope="col">挑戰日期</th>
+          <th scope="col">花費時間</th>
+          <th scope="col">消耗提示</th>
+          <th scope="col">總得分</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <th scope="row">1</th>
+          <td>晚點再想</td>
+          <td>2021/10/3</td>
+          <td>3秒鐘</td>
+          <td>0</td>
+          <td>1,000,000</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>小孟3</td>
+          <td>2033/03/03</td>
+          <td>1分鐘</td>
+          <td>0</td>
+          <td>900,000</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>瑞祥</td>
+          <td>2087/08/07</td>
+          <td>8分鐘7秒鐘</td>
+          <td>1</td>
+          <td>870,000</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Hung</td>
+          <td>2066/06/06</td>
+          <td>1小時</td>
+          <td>1</td>
+          <td>600,000</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>yp</td>
+          <td>2011/01/01</td>
+          <td>1小時</td>
+          <td>2</td>
+          <td>550,000</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>獐繭</td>
+          <td>2001/06/23</td>
+          <td>6小時23分鐘</td>
+          <td>3</td>
+          <td>60,000</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+      </tbody>
+    </table>
+    <br><br>
   </main>
   <footer>
-      <p class="footer-text">僅供 @2021 Line Fresh 商業競賽 使用&emsp;&emsp;</p>
+      <p class="footer-text">僅供 @2021 Line Fresh 商業競賽 使用&emsp;&emsp;隊名：晚點再想&emsp;&emsp;</p>
   </footer>
 </body>
 </html>

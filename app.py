@@ -81,6 +81,18 @@ def callback():
     return render_template("index.html",result=res)
 
 
+@app.route('/main', methods=['GET', 'POST'])
+def main():
+    if request.method == 'POST':
+        return redirect(url_for('index'))
+    return render_template("feedback.html")
+
+@app.route('/feedback', methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        return redirect(url_for('index'))
+    return render_template("feedback.html")
+
 # @app.route("/",methods= ["GET","POST"])
 # def main():
 #     r = requests.get('https://api.line.me/v2/oauth/accessToken')
