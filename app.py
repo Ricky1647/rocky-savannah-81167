@@ -74,8 +74,10 @@ def callback():
     req = urllib.request.Request(user_info_url, headers=headers, method='GET')
     with urllib.request.urlopen(req) as f:
         res = f.read()
-
-    return json.loads(res)
+    with open('token.json', 'w') as f:
+        json.dump(res, f)
+    return render_template("index.html")
+    #return json.loads(res)
 
 
 
