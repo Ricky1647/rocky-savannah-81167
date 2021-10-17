@@ -10,7 +10,7 @@ import base64
 from pprint import pprint
 import os
 import hashlib
-
+from github import Github
 # クライアント情報
 # Channel ID
 client_id = "1656533966"
