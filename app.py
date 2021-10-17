@@ -78,7 +78,7 @@ def callback():
     #     json.dump(res, f)
     #return render_template("index.html")
     #return json.loads(res)
-    return render_template("index.html")
+    return render_template("index.html",result=res)
 
 
 # @app.route("/",methods= ["GET","POST"])
