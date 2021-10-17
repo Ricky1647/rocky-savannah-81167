@@ -78,6 +78,7 @@ def callback():
     #     json.dump(res, f)
     #return render_template("index.html")
     #return json.loads(res)
+    res = res["pictureUrl"]
     return render_template("index.html",result=res)
 
 
