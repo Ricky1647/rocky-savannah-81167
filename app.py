@@ -79,8 +79,9 @@ def callback():
     #return render_template("index.html")
     #return json.loads(res)
     res = json.loads(res)
-    res = res["pictureUrl"]
-    return render_template("index.html",result=res)
+    pic = res["pictureUrl"]
+    name = res["displayName"]
+    return render_template("index.html",result=pic,name=name)
 
 
 @app.route('/main', methods=['GET', 'POST'])
