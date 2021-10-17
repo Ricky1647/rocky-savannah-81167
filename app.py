@@ -77,8 +77,8 @@ def callback():
     # with open('token.json', 'w') as f:
     #     json.dump(res, f)
     #return render_template("index.html")
-    return json.loads(res)
-
+    #return json.loads(res)
+    return render_template("index.html")
 
 
 # @app.route("/",methods= ["GET","POST"])
