@@ -85,7 +85,7 @@ def callback():
 def main():
     if request.method == 'POST':
         return redirect(url_for('index'))
-    return render_template("feedback.html")
+    return render_template("index.html")
 
 @app.route('/feedback', methods=['GET', 'POST'])
 def home():
